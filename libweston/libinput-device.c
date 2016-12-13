@@ -261,8 +261,8 @@ handle_pointer_axis(struct libinput_device *libinput_device,
 		vert = normalize_scroll(pointer_event, axis);
 
 		weston_event.axis = WL_POINTER_AXIS_VERTICAL_SCROLL;
-		weston_event.value = vert;
-		weston_event.discrete = vert_discrete;
+		weston_event.value = -vert;
+		weston_event.discrete = -vert_discrete;
 		weston_event.has_discrete = (vert_discrete != 0);
 
 		notify_axis(device->seat,
