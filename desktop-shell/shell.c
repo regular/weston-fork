@@ -3343,7 +3343,7 @@ do_zoom(struct weston_seat *seat, uint32_t time, uint32_t key, uint32_t axis,
 			else if (axis == WL_POINTER_AXIS_VERTICAL_SCROLL)
 				/* For every pixel zoom 20th of a step */
 				increment = output->zoom.increment *
-					    -value / 20.0;
+					    value / 20.0;
 			else
 				increment = 0;
 
